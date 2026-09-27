@@ -1,0 +1,254 @@
+/* Estilo customizado para a apresentação -  */
+
+:root {
+  --azul-escuro: #0b3d63;
+  --azul: #1f6fa5;
+  --azul-claro: #eaf3fa;
+  --laranja: #e07a2c;
+  --verde: #2f8f5b;
+  --vermelho: #b3392c;
+  --cinza-texto: #2b2b2b;
+  --cinza-claro: #f4f6f8;
+}
+
+.reveal {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: var(--cinza-texto);
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  color: var(--vermelho);
+  font-weight: 700;
+}
+
+.reveal h1 {
+  font-size: 1.6em;
+}
+
+.reveal h2 {
+  font-size: 1.2em;
+  border-bottom: 3px solid var(--laranja);
+  padding-bottom: 0.2em;
+  margin-bottom: 0.55em;
+  text-align: center;
+}
+
+.reveal .slide-number {
+  color: var(--vermelho);
+}
+
+.reveal p, .reveal li {
+  font-size: 0.82em;
+  line-height: 1.32;
+}
+
+/* Centralização geral do conteúdo das slides */
+.reveal .slides section {
+  text-align: center;
+}
+
+.reveal .slides section ul,
+.reveal .slides section ol {
+  display: inline-block;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reveal .slides section p {
+  text-align: center;
+}
+
+.reveal table {
+  margin: 0.4em auto;
+  border-collapse: collapse;
+  font-size: 0.68em;
+}
+
+.reveal table th {
+  background-color: var(--vermelho);
+  color: white;
+  padding: 5px 9px;
+}
+
+.reveal table td {
+  padding: 4px 9px;
+  border-bottom: 1px solid #ccc;
+}
+
+.reveal table tr:nth-child(even) {
+  background-color: var(--vermelho);
+}
+
+.reveal.has-dark-background table th {
+  background-color: rgba(255,255,255,0.15);
+}
+
+/* Slides com muito conteúdo (classe .smaller do Quarto) */
+.reveal .slides section.smaller p,
+.reveal .slides section.smaller li {
+  font-size: 0.72em;
+}
+
+.reveal .slides section.smaller table {
+  font-size: 0.6em;
+}
+
+.reveal .slides section.smaller .caixa,
+.reveal .slides section.smaller .caixa-formula,
+.reveal .slides section.smaller .exemplo-didatico {
+  font-size: 0.7em;
+  padding: 0.4em 0.8em;
+}
+
+/* Caixas de destaque */
+.caixa {
+  background-color: var(--laranja);
+  border-left: 6px solid var(--vermelho);
+  padding: 0.55em 1em;
+  border-radius: 6px;
+  margin: 0.5em auto;
+  font-size: 0.82em;
+  text-align: left;
+  max-width: 90%;
+}
+
+.caixa-formula {
+  background-color: #fff8ec;
+  border-left: 6px solid var(--laranja);
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  margin: 0.5em auto;
+  font-family: "Cambria Math", Georgia, serif;
+  font-size: 0.88em;
+  text-align: center;
+  max-width: 90%;
+}
+
+.significativo {
+  color: var(--vermelho);
+  font-weight: 700;
+}
+
+.nao-significativo {
+  color: var(--verde);
+  font-weight: 700;
+}
+
+.exemplo-didatico {
+  background-color: #f0eefc;
+  border-left: 6px solid #6a4fb3;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  margin: 0.5em auto;
+  font-size: 0.76em;
+  text-align: left;
+  max-width: 92%;
+}
+
+.fonte {
+  font-size: 0.52em;
+  color: #777;
+  font-style: italic;
+  text-align: center;
+  display: block;
+  margin-top: 0.5em;
+}
+
+.reveal .progress {
+  color: var(--laranja);
+}
+
+/* ---------- Slides de capa e transição (com foto de fundo) ---------- */
+
+.reveal .slides section.has-dark-background,
+.reveal .slides section[data-background-image] {
+  color: #ffffff;
+}
+
+.reveal .slides section[data-background-image] h1,
+.reveal .slides section[data-background-image] h2,
+.reveal .slides section[data-background-image] h3 {
+  color: #ffffff;
+  border-bottom: none;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.55);
+}
+
+.reveal .slides section[data-background-image] p,
+.reveal .slides section[data-background-image] .subtitulo-capa {
+  color: #f2f2f2;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+}
+
+/* Título de capa */
+.reveal .slides section.title-slide {
+  text-align: center;
+}
+
+.reveal .slides section.title-slide h1 {
+  font-size: 1.9em;
+  margin-bottom: 0.3em;
+}
+
+.reveal .slides section.title-slide .subtitle {
+  font-size: 1.05em;
+  color: #f2f2f2;
+  font-weight: 400;
+}
+
+.reveal .slides section.title-slide .author,
+.reveal .slides section.title-slide .date {
+  color: #e8e8e8;
+  font-size: 0.75em;
+}
+
+/* Slide divisória de seção: nome da seção grande e centralizado */
+.secao-titulo {
+  font-size: 2.2em;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+
+.secao-linha {
+  width: 90px;
+  height: 4px;
+  background-color: var(--laranja);
+  margin: 0.5em auto 0.7em auto;
+  border-radius: 2px;
+}
+
+/* Bloco de contato no slide final */
+.secao-contato {
+  margin-top: 1.4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3.5em;
+  color: #f2f2f2;
+  font-size: 0.5em;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+}
+
+.contato-coluna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.8;
+}
+
+.secao-contato strong {
+  color: #ffffff;
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+}
+
+.secao-contato a {
+  color: var(--laranja);
+  text-decoration: none;
+}
+
+.secao-contato a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,138 @@
+---
+title: "ANOVA de Welch"
+subtitle: "Diferenças entre ANOVA clássica e ANOVA de Welch"
+author:
+  - "Gabriel Gonçalves"
+  - "Olga Grichtchouk"
+format:
+  revealjs:
+    css: estilo.css
+    slide-number: true
+    transition: slide
+    theme: simple
+    embed-resources: true
+    center: true
+    scrollable: true
+    title-slide-attributes:
+      data-background-image: "est.jpg"
+      data-background-size: cover
+      data-background-position: center
+      data-background-opacity: "0.40"
+      data-background-color: "#0b3d63"
+---
+
+
+## ANOVA Clássica
+
+-   **Análise de variância com um fator:** avalia se uma variável independente tem efeito sobre uma variável de interesse, através da comparabilidade de médias entre mais de duas populações (Ex: tipos de máquinas A, B e C aceleram a produção média de um determinado produto).
+-   **Suposições:** amostras independentes, distribuição normal e variâncias iguais.
+
+$$ H_{0}: \mu_{1} = \mu_{2} = ... = \mu_{n} $$
+$$ H_{1}: \mu_{i} \neq \mu_{j}, \quad \text{para algum par (i,j)}$$ 
+
+
+## Suposições de Normalidade e Homocedasticidade
+
+::: caixa-formula
+Delacre, M., et al. (2019). Taking Parametric Assumptions Seriously: Arguments for the Use of Welch’s F-test instead of the Classical F-test in One-Way ANOVA. International Review of Social Psychology, 32(1): 13, 1–12.
+:::
+
+- Em muitas áreas de estudo, a suposição de normalidade não se sustenta. Ex: pode haver uma distribuição assimétrica na pontuação de uma escala de bem-estar aplicada em uma população porque há menos pessoas com depressão.
+- Homogeneidade de variâncias também é improvável em muitos contextos. Ex: Impacto da estrutura da linguagem nas percepções de papéis de gênero. Falantes de inglês utilizam mais linguagem neutra (the sun/the moon) do que falantes de português (o sol/a lua).
+
+
+## Teste F da ANOVA Clássiva
+
+![](imagem1.jpg) {fig-align="center"}
+
+
+
+## Teste F da ANOVA Clássica
+
+![](imagem2.jpg){fig-align = "center"}
+
+- Se a amostra de maior tamanho tiver maior variância, o valor do denominador aumenta e o valor do teste-F diminui -- **menos resultados significativos**.
+- Se a amostra de maior tamanho tiver menor variância, o valor do denominador diminui e o valor do teste-F aumenta -- **mais resultados significativos**.
+
+## ANOVA de Welch{.smaller}
+
+![](imagem3.jpg){fig-align= "center"}
+
+- Ponderada pela razão entre tamanho da amostra e sua variância
+- Indicada para comparação entre populações de variâncias desiguais
+
+
+## Metodologia do estudo
+
+- 2560 cenários criados por simulação Monte Carlo em que as médias entre grupos são iguais para analisar proporção do erro do tipo I (alfa = 5%).
+- Cinco condições:
+
+:::caixa-formula
+- Tamanho n e DP iguais
+- Tamanho n diferentes e DP iguais
+- Tamanho n iguais e DP diferentes
+- Tamanho n e DP diferentes (correlação positiva)
+- Tamanho n e DP diferentes (correlação negativa)
+:::
+
+## Resultados do estudo
+
+![](imagem4.jpg)
+
+
+## Conclusão do estudo
+
+- Teste-F clássico é mais eficiente quando os DP são iguais, embora o teste-F de Welch não ultrapasse tanto a proporção de 5% do erro do tipo I.
+- Na violação de homocedasticidade o teste-F de Welch é mais eficiente.
+
+::: fonte
+Delacre, M., et al. (2019). Taking Parametric Assumptions Seriously: Arguments for the Use of Welch’s F-test instead of the Classical F-test in One-Way ANOVA. International Review of Social Psychology, 32(1): 13, 1–12.
+:::
+
+##  {background-image="est.jpg" background-size="cover" background-position="center" background-opacity="0.30" background-color="#0b3d63"}
+
+::: secao-titulo
+Testes de Comparações Múltiplas
+:::
+
+::: secao-linha
+:::
+
+## Teste de Tukey
+
+...
+
+## Teste Games-Howell
+
+...
+
+## Conclusão
+
+...
+
+##  {background-image="est.jpg" background-size="cover" background-position="center" background-opacity="0.30" background-color="#0b3d63"}
+
+::: secao-titulo
+Obrigado
+:::
+
+::: secao-linha
+:::
+
+::: secao-contato
+::: contato-coluna
+**Gabriel Gonçalves**
+
+[g_goncalves\@id.uff.br](mailto:g_goncalves@id.uff.br)
+
+[github.com/Gonbriel](https://github.com/Gonbriel)
+:::
+
+::: contato-coluna
+**Olga Grichtchouk**
+
+[ogrichtchouk\@id.uff.br](mailto:ogrichtchouk@id.uff.br)
+
+[github.com/Olgagg93](https://github.com/Olgagg93)
+:::
+:::
