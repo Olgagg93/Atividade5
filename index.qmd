@@ -106,7 +106,7 @@ Testes de Comparações Múltiplas
 $$ H_{0}: \mu_{i} = \mu_{j} $$
 $$ H_{1}: \mu_{i} \neq \mu_{j}, \quad \text{para todos os possíveis pares (i,j)}$$  
 
-## Distribuição da amplitude estudentizada{.smaller}
+## Distribuição da amplitude estudentizada
 
 ![](imagem5.jpg)
 
@@ -115,7 +115,7 @@ $$ H_{1}: \mu_{i} \neq \mu_{j}, \quad \text{para todos os possíveis pares (i,j)
 ![](imagem6.jpg)
 
 ::: fonte
-**Moraes, J.R. Notas de aula de Inferência I. Niterói, 2026.**
+Moraes, J.R. Notas de aula de Inferência I. Niterói, 2026.
 :::
 
 ## Teste Games-Howell
@@ -152,6 +152,14 @@ Shingala MC, Rajyaguru A. 2015. Comparison of post hoc tests for unequal
 variance. Int J New Technol Sci Eng, 2(5):22–33.
 :::
 
+## Conclusão
+
+![](imagem8.jpg)
+
+:::fonte
+Shingala MC, Rajyaguru A. 2015. Comparison of post hoc tests for unequal
+variance. Int J New Technol Sci Eng, 2(5):22–33.
+:::
 
 ##  {background-image="est.jpg" background-size="cover" background-position="center" background-opacity="0.30" background-color="#0b3d63"}
 
