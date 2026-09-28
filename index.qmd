@@ -41,7 +41,7 @@ Delacre, M., et al. (2019). Taking Parametric Assumptions Seriously: Arguments f
 - Homogeneidade de variâncias também é improvável em muitos contextos. Ex: Impacto da estrutura da linguagem nas percepções sociais.
 
 
-## Teste F da ANOVA Clássiva
+## Teste F da ANOVA Clássica
 
 ![](imagem1.jpg)
 
