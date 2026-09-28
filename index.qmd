@@ -1,6 +1,6 @@
 ---
 title: "ANOVA de Welch"
-subtitle: "Diferenças entre ANOVA clássica e ANOVA de Welch"
+subtitle: "Diferenças entre ANOVA clássica e ANOVA de Welch e seus testes de comparações múltiplas"
 author:
   - "Gabriel Gonçalves"
   - "Olga Grichtchouk"
@@ -38,25 +38,25 @@ Delacre, M., et al. (2019). Taking Parametric Assumptions Seriously: Arguments f
 :::
 
 - Em muitas áreas de estudo, a suposição de normalidade não se sustenta. Ex: pode haver uma distribuição assimétrica na pontuação de uma escala de bem-estar aplicada em uma população porque há menos pessoas com depressão.
-- Homogeneidade de variâncias também é improvável em muitos contextos. Ex: Impacto da estrutura da linguagem nas percepções de papéis de gênero. Falantes de inglês utilizam mais linguagem neutra (the sun/the moon) do que falantes de português (o sol/a lua).
+- Homogeneidade de variâncias também é improvável em muitos contextos. Ex: Impacto da estrutura da linguagem nas percepções sociais.
 
 
 ## Teste F da ANOVA Clássiva
 
-![](imagem1.jpg) {fig-align="center"}
+![](imagem1.jpg)
 
 
 
 ## Teste F da ANOVA Clássica
 
-![](imagem2.jpg){fig-align = "center"}
+![](imagem2.jpg)
 
 - Se a amostra de maior tamanho tiver maior variância, o valor do denominador aumenta e o valor do teste-F diminui -- **menos resultados significativos**.
 - Se a amostra de maior tamanho tiver menor variância, o valor do denominador diminui e o valor do teste-F aumenta -- **mais resultados significativos**.
 
 ## ANOVA de Welch{.smaller}
 
-![](imagem3.jpg){fig-align= "center"}
+![](imagem3.jpg)
 
 - Ponderada pela razão entre tamanho da amostra e sua variância
 - Indicada para comparação entre populações de variâncias desiguais
@@ -100,15 +100,60 @@ Testes de Comparações Múltiplas
 
 ## Teste de Tukey
 
-...
+- Utilizado para comparações entre pares de médias para avaliar quais grupos estão diferindo significativamente após rejeição da hipótese nula na ANOVA Clássica.
+- **Suposição mais importante:** homogeneidade das variâncias.
+
+$$ H_{0}: \mu_{i} = \mu_{j} $$
+$$ H_{1}: \mu_{i} \neq \mu_{j}, \quad \text{para todos os possíveis pares (i,j)}$$  
+
+## Distribuição da amplitude estudentizada{.smaller}
+
+- Amostras de tamanhos **iguais**:
+
+![](imagem5.jpg)
+
+- Amostras de tamanhos **diferentes**:
+
+![](imagem6.jpg)
+
+::: fonte
+**Moraes, J.R. Notas de aula de Inferência I. Niterói, 2026.**
+:::
 
 ## Teste Games-Howell
 
-...
+:::caixa-formula
+Games, P. A., and Howell, J. F. (1976). Pair wise multiple comparison procedures with unequal n's and/or variances. Journal of Educational Statistics, 1:13-125.
+:::
 
-## Conclusão
+- Teste de Tukey mantem a proporção de erro do tipo I = 5% para toda a "família".
+- No entanto, a heterogeneidade de variâncias mostrou-se um problema, principalmente com tamanhos de amostra distintos
 
-...
+
+## Transformação para o teste de Games-Howell
+
+![](imagem7.jpg)
+
+::: fonte
+Allam, I. M. A. (pre-print). Games-Howell Test: A Comprehensive C Implementation for Multiple Comparisons with Heterogeneous Variances.
+:::
+
+## Uso do teste de Games-Howell
+
+:::caixa-formula
+- **Vantagens:**
+- Controla a proporção de erro com tamanhos de amostra diferentes e variâncias desiguais.
+- Robusto para a não-normalidade.
+- **Desvantagens:**
+- Pode ser muito liberal com amostras pequenas (n < 15).
+- Alfa pode exceder 5% quando graus de liberdade são pequenos.
+:::
+
+:::fonte
+Shingala MC, Rajyaguru A. 2015. Comparison of post hoc tests for unequal
+variance. Int J New Technol Sci Eng, 2(5):22–33.
+:::
+
 
 ##  {background-image="est.jpg" background-size="cover" background-position="center" background-opacity="0.30" background-color="#0b3d63"}
 
